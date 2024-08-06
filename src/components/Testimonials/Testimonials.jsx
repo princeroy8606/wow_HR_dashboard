@@ -13,12 +13,17 @@ const CoreTeam = () => {
           <NewTestimonial onCancel={() => setopenAddnewMentor(false)} />
         )}
         <div
+          className={`w-full h-20 flex items-center justify-between  ${
+            openAddnewMentor && "blur-sm"
+          }`}
+        ></div>
+        <div
           className={`w-full h-12 flex items-center justify-between ${
             openAddnewMentor && "blur-sm"
           }`}
         >
           <div className="w-fit h-full">
-            <h1 className="font-bold text-[1.2rem] ">Testimonials</h1>
+            <h1 className="font-bold text-[1.5rem] ">Testimonials</h1>
             <p>Lorem ipsum dolor sit Pamet consectetur adipisicing elit.</p>
           </div>
         </div>
@@ -75,7 +80,7 @@ const CoreTeam = () => {
                 />
                 <p>TestUser</p>
               </div>
-              
+
               <div className="w-[30rem] h-full overflow-hidden flex gap-2 items-center text-black">
                 <p className="w-full h-full text-[12px] text-justify ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

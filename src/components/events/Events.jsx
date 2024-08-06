@@ -14,12 +14,17 @@ const Events = () => {
           <NewEvents onCancel={() => setopenAddnewMentor(false)} />
         )}
         <div
+          className={`w-full h-20 flex items-center justify-between  ${
+            openAddnewMentor && "blur-sm"
+          }`}
+        ></div>
+        <div
           className={`w-full h-12 flex items-center justify-between ${
             openAddnewMentor && "blur-sm"
           }`}
         >
           <div className="w-fit h-full">
-            <h1 className="font-bold text-[1.2rem] ">Events</h1>
+            <h1 className="font-bold text-[1.5rem] ">Events</h1>
             <p>Lorem ipsum dolor sit Pamet consectetur adipisicing elit.</p>
           </div>
         </div>
