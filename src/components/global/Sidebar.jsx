@@ -1,34 +1,103 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import assets from "../../assets/assets";
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const pathMatch = (path) => {
+    if (path === location.pathname) return true;
+    return false;
+  };
+
   return (
-    <div className="hidden w-[18rem] h-full bg-gray-200  flex-col gap-4 items-center p-4 lg:flex">
-      <p
+    <div className="hidden w-[16rem] h-full bg-white  flex-col gap-5 items-center p-4 lg:flex">
+      <div className="w-full h-[5rem]"></div>
+      <div
         onClick={() => navigate("/")}
-        className="w-full h-10 bg-blue-600 p-1 rounded-lg flex items-center pl-8 text-white font-medium"
+        className={`w-full h-11 cursor-pointer ${
+          pathMatch("/") && "bg-[#2984FF]"
+        } p-1 rounded-lg flex gap-4 items-center pl-8`}
       >
-        LeaderShip
-      </p>
-      <p
+        <img
+          src={
+            pathMatch("/") ? assets.Img.Leader_white : assets.Img.Leader_gray
+          }
+          alt="icon"
+          className="w-10 h-7 object-contain"
+        />
+        <p className={`${pathMatch("/") ? "text-white" : "text-gray-500"}`}>
+          LeaderShip
+        </p>
+      </div>
+      <div
         onClick={() => navigate("/testimonials")}
-        className="w-full h-10 bg-blue-600 p-1 rounded-lg flex items-center pl-8 text-white font-medium"
+        className={`w-full h-11 cursor-pointer ${
+          pathMatch("/testimonials") && "bg-[#2984FF]"
+        }  p-1 rounded-lg flex items-center pl-8 `}
       >
-        Testimonials
-      </p>
-      <p
+        <img
+          src={
+            pathMatch("/")
+              ? assets.Img.Testimonial_white
+              : assets.Img.Testimonial_gray
+          }
+          alt="icon"
+          className="w-10 h-7 object-contain"
+        />
+        <p
+          className={`${
+            pathMatch("/testimonials") ? "text-white" : "text-gray-500"
+          }`}
+        >
+          Testimonials
+        </p>
+      </div>
+      <div
         onClick={() => navigate("/events")}
-        className="w-full h-10 bg-blue-600 p-1 rounded-lg flex items-center pl-8 text-white font-medium"
+        className={`w-full h-11 cursor-pointer ${
+          pathMatch("/events") && "bg-[#2984FF]"
+        }  p-1 rounded-lg flex items-center pl-8 `}
       >
-        Events
-      </p>
-      <p
+        <img
+          src={
+            pathMatch("/")
+              ? assets.Img.Calender_white
+              : assets.Img.Calender_gray
+          }
+          alt="icon"
+          className="w-10 h-7 object-contain"
+        />
+        <p
+          className={`${pathMatch("/events") ? "text-white" : "text-gray-500"}`}
+        >
+          Events
+        </p>
+      </div>
+      <div
         onClick={() => navigate("/knowledgeHub")}
-        className="w-full h-10 bg-blue-600 p-1 rounded-lg flex items-center pl-8 text-white font-medium"
+        className={`w-full h-11 cursor-pointer ${
+          pathMatch("/knowledgeHub") && "bg-[#2984FF]"
+        }  p-1 rounded-lg flex items-center pl-8`}
       >
-        Knowledge Hub
-      </p>
+        <img
+          src={
+            pathMatch("/")
+              ? assets.Img.Knowledge_white
+              : assets.Img.Knowledge_gray
+          }
+          alt="icon"
+          className="w-10 h-7 object-contain"
+        />
+        <p
+          className={`${
+            pathMatch("/knowledgeHub") ? "text-white" : "text-gray-500"
+          }`}
+        >
+          Knowledge Hub
+        </p>
+      </div>
     </div>
   );
 };
