@@ -53,7 +53,7 @@ const Testimonials = () => {
               Add New Member
             </div>
           </div>
-          <div className="min-w-fit w-full  h-[calc(100%-4rem)] bg-gray-50  mt-4 rounded-lg flex flex-col gap-2 ">
+          <div className="min-w-fit w-full  h-[calc(100%-4rem)] bg-gray-50  mt-4 rounded-lg flex flex-col gap-4 ">
           <div className="w-full h-10 flex justify-between gap-4 bg-[#eaeaea] px-4 rounded-t-md ">
               <div className="w-[2rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>SI.No</p>
@@ -79,7 +79,97 @@ const Testimonials = () => {
                 <p>Action</p>
               </div>
             </div>
-            <div className="w-full h-12 gap-4 flex justify-between border-b border-b-gray-200 px-4 items-center">
+            <div className="w-full h-12 gap-4 flex justify-between px-4 items-center">
+              <div className="w-[2rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>01</p>
+              </div>
+              <div className="w-[10rem] h-fit flex gap-2 items-center text-gray-500">
+                <img
+                  src={assets.Img.Bg}
+                  alt="icon"
+                  className="w-7 h-7 rounded-full object-cover"
+                />
+                <p>TestUser</p>
+              </div>
+              <div className="w-[8rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>Tester</p>
+              </div>
+
+              <div className="w-[8rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>Mentor</p>
+              </div>
+              <div className="w-[8rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>Tamilnadu</p>
+              </div>
+              <div className="w-[15rem] h-full overflow-hidden flex gap-2 items-center text-gray-500">
+                <p className="w-full h-full text-[12px] text-justify ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate quo ipsa ...
+                </p>
+              </div>
+              <div className="w-[5rem] h-fit flex gap-2 items-center justify-between ">
+                <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-blue-100 cursor-pointer flex items-center justify-center ">
+                  <img
+                    src={assets.Img.edit}
+                    alt="icon"
+                    className="w-[60%] h-[60%] object-contain"
+                  />
+                </div>
+                <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-red-100 cursor-pointer  flex items-center justify-center ">
+                  <img
+                    src={assets.Img.Delete}
+                    alt="icon"
+                    className="w-[60%] h-[60%] object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="w-full h-12 gap-4 flex justify-between px-4 items-center">
+              <div className="w-[2rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>01</p>
+              </div>
+              <div className="w-[10rem] h-fit flex gap-2 items-center text-gray-500">
+                <img
+                  src={assets.Img.Bg}
+                  alt="icon"
+                  className="w-7 h-7 rounded-full object-cover"
+                />
+                <p>TestUser</p>
+              </div>
+              <div className="w-[8rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>Tester</p>
+              </div>
+
+              <div className="w-[8rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>Mentor</p>
+              </div>
+              <div className="w-[8rem] h-fit flex gap-2 items-center text-gray-500">
+                <p>Tamilnadu</p>
+              </div>
+              <div className="w-[15rem] h-full overflow-hidden flex gap-2 items-center text-gray-500">
+                <p className="w-full h-full text-[12px] text-justify ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate quo ipsa ...
+                </p>
+              </div>
+              <div className="w-[5rem] h-fit flex gap-2 items-center justify-between ">
+                <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-blue-100 cursor-pointer flex items-center justify-center ">
+                  <img
+                    src={assets.Img.edit}
+                    alt="icon"
+                    className="w-[60%] h-[60%] object-contain"
+                  />
+                </div>
+                <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-red-100 cursor-pointer  flex items-center justify-center ">
+                  <img
+                    src={assets.Img.Delete}
+                    alt="icon"
+                    className="w-[60%] h-[60%] object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="w-full h-12 gap-4 flex justify-between px-4 items-center">
               <div className="w-[2rem] h-fit flex gap-2 items-center text-gray-500">
                 <p>01</p>
               </div>
