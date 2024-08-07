@@ -1,6 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const NewKnowledge = ({onCancel}) => {
+const NewKnowledge = ({ onCancel }) => {
+  const [knowledgeData, setKnowledgeData] = useState({
+    type: "",
+    sourceType: "",
+    description: "",
+    mediaFile: null,
+    mediaUrl: "",
+  });
+
+  const [imageUrl, setImageUrl] = useState("");
+  const [videoUrl, setVideoUrl] = useState("");
+
+  useEffect(() => {
+    if (knowledgeData.mediaFile && knowledgeData.sourceType === "image") {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImageUrl(e.target.result);
+      };
+      reader.readAsDataURL(knowledgeData.mediaFile);
+    }
+    if (knowledgeData.mediaFile && knowledgeData.sourceType === "video") {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setVideoUrl(e.target.result);
+      };
+      reader.readAsDataURL(knowledgeData.mediaFile);
+    }
+  }, [knowledgeData.mediaFile]);
+
   return (
     <div className="absolute  z-10 top-0 left-0 w-full h-full bg-[#50525580] flex justify-center items-center">
       <div className="w-[90%] h-[70%] bg-white rounded-md p-8">
@@ -10,35 +38,82 @@ const NewKnowledge = ({onCancel}) => {
               type="text"
               className="w-full h-10 pl-2 rounded-md border-none outline-none bg-slate-300 font-medium "
               placeholder="Type"
+              value={knowledgeData.type}
+              onChange={(e) =>
+                setKnowledgeData({ ...knowledgeData, type: e.target.value })
+              }
             />
             <input
               type="text"
               className="w-full h-10 pl-2 rounded-md border-none outline-none bg-slate-300 font-medium "
               placeholder="Source Type"
+              value={knowledgeData.sourceType}
+              onChange={(e) =>
+                setKnowledgeData({
+                  ...knowledgeData,
+                  sourceType: e.target.value,
+                })
+              }
             />
           </div>
           <div className="w-[40%] h-full rounded-md bg-slate-300 relative flex justify-center items-center">
-            <p className="text-gray-500 font-medium">Media Preview 🖼️</p>
+            {knowledgeData.mediaFile && knowledgeData.sourceType === "image" ? (
+              <img
+                src={imageUrl}
+                alt="image"
+                className="absolute w-full h-full top-0 left-0 z-1 rounded-md object-cover"
+              />
+            ) : (
+              <p className="text-gray-500 font-medium">Media Preview 🖼️</p>
+            )}
+            {knowledgeData.mediaFile &&
+              knowledgeData.sourceType === "video" && (
+                <video
+                  src={videoUrl}
+                  alt="image"
+                  className="absolute w-full h-full top-0 left-0 z-1 rounded-md object-cover"
+                />
+              )}
           </div>
         </div>
         <div className="w-full flex justify-between">
           <textarea
             className="w-[50%] h-[15rem] outline-none border-none rounded-md bg-slate-300 p-3"
             placeholder="description"
+            value={knowledgeData.description}
+            onChange={(e) =>
+              setKnowledgeData({
+                ...knowledgeData,
+                description: e.target.value,
+              })
+            }
           />
           <div className="w-[40%] h-full flex flex-col gap-5 mt-5 ">
             <div className="w-full h-10 pl-2 flex justify-center items-center rounded-md border-none outline-none bg-slate-400 font-medium relative">
               <input
                 type="file"
-                accept=".jpg,.png"
+                accept={knowledgeData.sourceType === "image" ? ".jpg,.png" : ""}
                 className="w-full h-full absolute top-0 left-0 opacity-0 cursor-pointer"
+                onChange={(e) =>
+                  setKnowledgeData({
+                    ...knowledgeData,
+                    mediaFile: e.target.files[0],
+                  })
+                }
               />
-              <p p className="text-center">Choose From Device</p>
+              <p className="text-gray-500 font-medium">Add Media + </p>
             </div>
             <input
               type="text"
               className="w-full h-10 pl-2 rounded-md border-none outline-none bg-slate-200 font-medium "
               placeholder="Link 🔗"
+              value={knowledgeData.mediaUrl}
+              onChange={(e) =>
+                setKnowledgeData({
+                  ...knowledgeData,
+                  mediaUrl: e.target.value,
+                })
+              }
             />
           </div>
         </div>

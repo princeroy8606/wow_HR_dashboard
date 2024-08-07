@@ -12,7 +12,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="hidden w-[16rem] h-full bg-white  flex-col gap-5 items-center p-4 lg:flex">
+    <div className="hidden w-[18rem] h-full bg-white  flex-col gap-5 items-center p-4 lg:flex">
       <div className="w-full h-[5rem]"></div>
       <div
         onClick={() => navigate("/")}
