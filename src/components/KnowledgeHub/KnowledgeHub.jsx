@@ -54,28 +54,28 @@ const KnowledgeHub = () => {
               Add New
             </div>
           </div>
-          <div className="min-w-fit w-full h-[calc(100%-4rem)] bg-gray-100 mt-16  md:mt-4  rounded-lg flex flex-col gap-2 ">
-            <div className="w-full h-10 flex justify-between gap-4 bg-[#eaeaea] px-4 rounded-t-md ">
-              <div className="w-[2rem] h-full flex gap-2 items-center text-black">
+          <div className="min-w-fit w-full h-[calc(100%-4rem)] bg-gray-50 mt-16  md:mt-4  rounded-lg flex flex-col gap-2 ">
+            <div className="w-full h-10 flex justify-between gap-4 bg-[#f4f4f4] px-4 rounded-t-md ">
+              <div className="w-[2rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>SI.No</p>
               </div>
-              <div className="w-[8rem] h-full flex gap-2 items-center text-black">
+              <div className="w-[8rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>Type</p>
               </div>
-              <div className="w-[8rem] h-full flex gap-2 items-center text-black">
+              <div className="w-[8rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>Source Type</p>
               </div>
-              <div className="w-[30rem] h-full flex gap-2 items-center text-black">
+              <div className="w-[30rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>Description</p>
               </div>
-              <div className="w-[8rem] h-full flex gap-2 items-center text-black">
+              <div className="w-[8rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>Image</p>
               </div>
-              <div className="w-[8rem] h-full flex gap-2 items-center text-black">
+              <div className="w-[5rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>Action</p>
               </div>
             </div>
-            <div className="w-full h-10 flex justify-between border-b border-b-blue-400 px-4 items-center">
+            <div className="w-full h-12 flex justify-between border-b border-b-gray-200 px-4 items-center">
               <div className="w-[2rem] h-fit flex gap-2 items-center text-gray-500">
                 <p>01</p>
               </div>
@@ -89,26 +89,25 @@ const KnowledgeHub = () => {
                 <p className="w-full h-full text-[12px] text-justify ">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Cupiditate quo ipsa dignissimos, quos itaque rem quisquam
-                  distinctio, molestiae autem dolores ratione aspernatur veniam
-                  enim! Odio mollitia pariatur vitae similique commodi?
+                  distinctio, ...
                 </p>
               </div>
-              <div className="w-[8rem] h-fit flex gap-2 items-center text-gray-500">
-                <img
-                  src={assets.Img.edit}
+              <div className="w-[8rem] h-full flex gap-2 items-center text-gray-500">
+              <img
+                  src={assets.Img.Bg}
                   alt="icon"
-                  className="w-7 h-7 object-contain"
-                />{" "}
+                  className="w-full h-[90%] object-cover rounded-md"
+                />
               </div>
-              <div className="w-[8rem] h-fit flex gap-2 items-center justify-between ">
-                <div className="w-[3rem] h-8 bg-blue-400 hover:bg-blue-500 rounded-md cursor-pointer flex items-center justify-center ">
+              <div className="w-[5rem] h-fit flex gap-1 items-center justify-between ">
+                <div className="w-[2rem] h-8  bg-gray-100 hover:bg-blue-100 rounded-md cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
                   />
                 </div>
-                <div className="w-[3rem] h-8 bg-red-400 rounded-md hover:bg-red-500 cursor-pointer  flex items-center justify-center ">
+                <div className="w-[2rem] h-8  cursor-pointer bg-gray-100 rounded-md hover:bg-red-100  flex items-center justify-center ">
                   <img
                     src={assets.Img.Delete}
                     alt="icon"
