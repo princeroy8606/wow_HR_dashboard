@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import Sidebar from "../global/Sidebar";
 import assets from "../../assets/assets";
 import NewTestimonial from "./NewTestimonial";
+import MobileSidebar from "../global/MobileSidebar";
 
 const CoreTeam = () => {
   const [openAddnewMentor, setopenAddnewMentor] = useState(false);
+  const [openSidebar, setOpenSidebar] = useState(false);
+
   return (
     <div className="w-screen h-screen bg-white flex ">
       <Sidebar />
@@ -12,11 +15,29 @@ const CoreTeam = () => {
         {openAddnewMentor && (
           <NewTestimonial onCancel={() => setopenAddnewMentor(false)} />
         )}
+        {openSidebar && <MobileSidebar />}
         <div
           className={`w-full h-20 flex items-center justify-between  ${
             openAddnewMentor && "blur-sm"
           }`}
-        ></div>
+        >
+          <img
+            src={assets.Img.Menu_Icon}
+            alt="icon"
+             className="w-7 h-7 opacity-100 object-contain lg:opacity-0"
+            onClick={() => setOpenSidebar(true)}
+          />
+          <div className="w-fit h-full flex items-center gap-4">
+            <img
+              src={assets.Img.Bg}
+              alt="icon"
+              className="w-7 h-7 rounded-full object-cover"
+            />
+            <p className="text-[1.2rem] font-semibold text-blue-600">
+              Test User
+            </p>
+          </div>
+        </div>
         <div
           className={`w-full h-12 flex items-center justify-between ${
             openAddnewMentor && "blur-sm"
@@ -53,7 +74,7 @@ const CoreTeam = () => {
             </div>
           </div>
           <div className="min-w-fit w-full  h-[calc(100%-4rem)] bg-gray-50  mt-4 rounded-lg flex flex-col gap-4 ">
-          <div className="w-full h-10 flex justify-between gap-4 bg-[#eaeaea] px-4 rounded-t-md ">
+            <div className="w-full h-10 flex justify-between gap-4 bg-[#eaeaea] px-4 rounded-t-md ">
               <div className="w-[2rem] h-full flex gap-2 items-center text-black font-medium">
                 <p>SI.No</p>
               </div>

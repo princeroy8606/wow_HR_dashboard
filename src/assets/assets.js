@@ -10,6 +10,8 @@ import Leader_gray from "./leader-gray.png";
 import Leader_white from "./leader-white.png";
 import Testimonial_gray from "./testimonials-gray.png";
 import Testimonial_white from "./testimonial-white.png";
+import Menu_Icon from "./menu.png";
+import WowHRLogo from "./WowHRLogo.png";
 
 const Img = {
   Search,
@@ -23,7 +25,9 @@ const Img = {
   Leader_gray,
   Leader_white,
   Testimonial_gray,
-  Testimonial_white
+  Testimonial_white,
+  Menu_Icon,
+  WowHRLogo
 };
 
 export default { Img };
