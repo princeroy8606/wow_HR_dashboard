@@ -23,7 +23,7 @@ const Testimonials = () => {
           <img
             src={assets.Img.Menu_Icon}
             alt="icon"
-             className="w-7 h-7 opacity-100 object-contain lg:opacity-0"
+            className="w-7 h-7 opacity-100 object-contain lg:opacity-0"
             onClick={() => setOpenSidebar(true)}
           />
           <div className="w-fit h-full flex items-center gap-4">
@@ -132,6 +132,8 @@ const Testimonials = () => {
                     src={assets.Img.edit}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
+                    onClick={()=>setopenAddnewMentor(true)}
+
                   />
                 </div>
                 <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-red-100 cursor-pointer  flex items-center justify-center ">
@@ -177,6 +179,8 @@ const Testimonials = () => {
                     src={assets.Img.edit}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
+                    onClick={()=>setopenAddnewMentor(true)}
+
                   />
                 </div>
                 <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-red-100 cursor-pointer  flex items-center justify-center ">
@@ -222,6 +226,7 @@ const Testimonials = () => {
                     src={assets.Img.edit}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
+                    onClick={()=>setopenAddnewMentor(true)}
                   />
                 </div>
                 <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-red-100 cursor-pointer  flex items-center justify-center ">

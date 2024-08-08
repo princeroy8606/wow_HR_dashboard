@@ -25,7 +25,7 @@ const KnowledgeHub = () => {
             src={assets.Img.Menu_Icon}
             alt="icon"
             className="w-7 h-7 opacity-100 object-contain lg:opacity-0"
-                        onClick={() => setOpenSidebar(true)}
+            onClick={() => setOpenSidebar(true)}
           />
           <div className="w-fit h-full flex items-center gap-4">
             <img
@@ -112,7 +112,7 @@ const KnowledgeHub = () => {
                 </p>
               </div>
               <div className="w-[8rem] h-full flex gap-2 items-center text-gray-500">
-              <img
+                <img
                   src={assets.Img.Bg}
                   alt="icon"
                   className="w-full h-[90%] object-cover rounded-md"
@@ -122,6 +122,7 @@ const KnowledgeHub = () => {
                 <div className="w-[2rem] h-8  bg-gray-100 hover:bg-blue-100 rounded-md cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}
+                    onClick={() => setopenAddnewMentor(true)}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
                   />
@@ -153,7 +154,7 @@ const KnowledgeHub = () => {
                 </p>
               </div>
               <div className="w-[8rem] h-full flex gap-2 items-center text-gray-500">
-              <img
+                <img
                   src={assets.Img.Bg}
                   alt="icon"
                   className="w-full h-[90%] object-cover rounded-md"
@@ -163,6 +164,7 @@ const KnowledgeHub = () => {
                 <div className="w-[2rem] h-8  bg-gray-100 hover:bg-blue-100 rounded-md cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}
+                    onClick={() => setopenAddnewMentor(true)}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
                   />
@@ -194,7 +196,7 @@ const KnowledgeHub = () => {
                 </p>
               </div>
               <div className="w-[8rem] h-full flex gap-2 items-center text-gray-500">
-              <img
+                <img
                   src={assets.Img.Bg}
                   alt="icon"
                   className="w-full h-[90%] object-cover rounded-md"
@@ -204,6 +206,7 @@ const KnowledgeHub = () => {
                 <div className="w-[2rem] h-8  bg-gray-100 hover:bg-blue-100 rounded-md cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}
+                    onClick={() => setopenAddnewMentor(true)}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
                   />

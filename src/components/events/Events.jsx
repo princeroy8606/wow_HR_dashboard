@@ -122,6 +122,7 @@ const Events = () => {
                 <div className="w-[3rem] h-8 bg-gray-100 hover:bg-blue-100 rounded-md cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}
+                    onClick={() => setopenAddnewMentor(true)}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
                   />
@@ -163,6 +164,7 @@ const Events = () => {
                 <div className="w-[3rem] h-8 bg-gray-100 hover:bg-blue-100 rounded-md cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}
+                    onClick={() => setopenAddnewMentor(true)}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
                   />
@@ -204,6 +206,7 @@ const Events = () => {
                 <div className="w-[3rem] h-8 bg-gray-100 hover:bg-blue-100 rounded-md cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}
+                    onClick={() => setopenAddnewMentor(true)}
                     alt="icon"
                     className="w-[60%] h-[60%] object-contain"
                   />
