@@ -33,7 +33,7 @@ const Events = () => {
             openAddnewMentor && "blur-sm"
           } `}
         >
-          <div className="w-full h-10 flex justify-between items-center flex-wrap gap-4 ">
+          <div className="w-full h-10 flex justify-between items-center flex-wrap gap-4 mt-8 md:mt-0 ">
             <div className="bg-[#edededde] w-[20rem] h-[90%] px-2 flex items-center gap-1 border rounded-md text-white border-blue-200">
               <img
                 src={assets.Img.Search}

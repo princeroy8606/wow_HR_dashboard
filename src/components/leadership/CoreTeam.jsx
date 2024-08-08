@@ -33,8 +33,8 @@ const Testimonials = () => {
             openAddnewMentor && "blur-sm"
           } `}
         >
-          <div className="w-full h-10 flex justify-between items-center ">
-          <div className="bg-[#edededde] w-[20rem] h-[90%] px-2 flex items-center gap-1 border rounded-md text-white border-blue-200">
+          <div className="w-full h-fit flex justify-between items-center flex-wrap gap-4 mt-8 md:mt-0 ">
+          <div className="bg-[#edededde] w-[20rem] h-10 px-2 flex items-center gap-1 border rounded-md text-white border-blue-200">
               <img
                 src={assets.Img.Search}
                 alt="search"
@@ -48,7 +48,7 @@ const Testimonials = () => {
             </div>
             <div
               onClick={() => setopenAddnewMentor(true)}
-              className=" w-[11rem] h-[100%] flex items-center justify-center rounded-md bg-[#2d6acb] cursor-pointer font-medium text-white"
+              className=" w-[11rem] h-10 flex items-center justify-center rounded-md bg-[#2d6acb] cursor-pointer font-medium text-white"
             >
               Add New Member
             </div>
@@ -107,7 +107,7 @@ const Testimonials = () => {
                   Cupiditate quo ipsa ...
                 </p>
               </div>
-              <div className="w-[5rem] h-fit flex gap-2 items-center justify-between ">
+              <div className="w-[5rem] h-fit flex gap-2 items-center justify-between  ">
                 <div className="w-[3rem] h-8 bg-gray-100 rounded-md hover:bg-blue-100 cursor-pointer flex items-center justify-center ">
                   <img
                     src={assets.Img.edit}

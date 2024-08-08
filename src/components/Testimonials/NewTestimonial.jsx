@@ -29,13 +29,13 @@ const NewMentor = ({ onCancel }) => {
     }
   }, [testimonialData.image]);
 
-  console.log(testimonialData);
+  console.log(testimonialData); 
 
   return (
-    <div className="absolute  z-10 top-0 left-0 w-full h-full bg-[#50525580] flex justify-center items-center">
-      <div className="w-[70%] h-[70%] bg-white rounded-md p-8">
-        <div className="w-full h-[12rem] flex gap-4 justify-between flex-wrap">
-          <div className="w-[50%] h-full flex flex-col gap-7 ">
+    <div className="absolute w-screen h-screen lg:w-full lg:h-full  z-10 top-0 left-0 bg-[#50525580] flex justify-center items-center">
+      <div className="w-full md:w-[80%] h-full md:h-fit bg-white rounded-md p-4  md:p-8">
+        <div className="w-full h-fit flex gap-4 justify-between flex-wrap mt-12 md:mt-0">
+          <div className="w-full md:w-[50%] h-full flex flex-col gap-7 ">
             <input
               type="text"
               className="w-full h-10 pl-2 rounded-md border-none outline-none bg-slate-300 font-medium "
@@ -58,7 +58,7 @@ const NewMentor = ({ onCancel }) => {
               onChange={(e) => handleInput("organization", e.target.value)}
             />
           </div>
-          <div className="w-[40%] h-full rounded-md bg-slate-300 relative flex justify-center items-center">
+          <div className="w-full md:w-[40%] h-[12rem] rounded-md bg-slate-300 relative flex justify-center items-center">
             <input
               type="file"
               accept=".jpg,.png"

@@ -32,8 +32,8 @@ const CoreTeam = () => {
             openAddnewMentor && "blur-sm"
           } `}
         >
-          <div className="w-full h-10 flex justify-between items-center ">
-            <div className="bg-[#edededde] w-[20rem] h-[90%] px-2 flex items-center gap-1 border rounded-md text-white border-blue-200">
+          <div className="w-full h-fit flex justify-between items-center flex-wrap gap-4 mt-8 md:mt-0 ">
+            <div className="bg-[#edededde] w-[20rem] h-10 px-2 flex items-center gap-1 border rounded-md text-white border-blue-200">
               <img
                 src={assets.Img.Search}
                 alt="search"
@@ -47,7 +47,7 @@ const CoreTeam = () => {
             </div>
             <div
               onClick={() => setopenAddnewMentor(true)}
-              className=" w-[12rem] h-[100%] flex items-center justify-center rounded-md bg-[#3372d7] cursor-pointer font-medium text-white"
+              className=" w-[12rem] h-10 flex items-center justify-center rounded-md bg-[#3372d7] cursor-pointer font-medium text-white"
             >
               Add New testimonial
             </div>

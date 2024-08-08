@@ -35,10 +35,10 @@ const NewMentor = ({ onCancel }) => {
   };
 
   return (
-    <div className="absolute  z-10 top-0 left-0 w-full h-full bg-[#50525580] flex justify-center items-center">
-      <div className="w-[90%] h-[81%] bg-white rounded-md p-8">
-        <div className="w-full h-[17rem] flex gap-4 justify-between flex-wrap">
-          <div className="w-[50%] h-full flex flex-col gap-7 ">
+    <div className="absolute  z-10 top-0 left-0 w-screen h-screen lg:w-full lg:h-full bg-[#50525580] flex justify-center items-center">
+      <div className="w-full md:w-[80%] h-full md:h-fit bg-white rounded-md p-4 md:p-8">
+        <div className="w-full h-fit flex gap-4 justify-between flex-wrap mt-12 md:mt-0">
+          <div className="w-full md:w-[50%] h-full flex flex-col gap-4  min-w-[10rem]">
             <input
               type="text"
               className="w-full h-10 pl-2 rounded-md border-none outline-none bg-slate-300 font-medium "
@@ -68,7 +68,7 @@ const NewMentor = ({ onCancel }) => {
               onChange={(e) => handleInput("location", e.target.value)}
             />
           </div>
-          <div className="w-[40%] h-full rounded-md bg-slate-300 relative flex justify-center items-center">
+          <div className="w-full md:w-[40%] h-[10rem] rounded-md bg-slate-300 relative flex justify-center items-center">
             <input
               type="file"
               accept=".jpg,.png"
@@ -91,14 +91,14 @@ const NewMentor = ({ onCancel }) => {
             )}
           </div>
         </div>
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between mt-8 flex-wrap">
           <textarea
-            className="w-[50%] h-[15rem] outline-none border-none rounded-md bg-slate-300 p-3"
+            className="w-full md:w-[50%] h-[15rem] outline-none border-none rounded-md bg-slate-300 p-3"
             placeholder="description *"
             value={mentorData.description}
             onChange={(e) => handleInput("description", e.target.value)}
           />
-          <div className="w-[40%] h-full flex flex-col gap-5 mt-5 ">
+          <div className="w-full md:w-[40%] h-full flex flex-col gap-5 mt-5 ">
             <input
               type="text"
               className="w-full h-10 pl-2 rounded-md border-none outline-none bg-slate-200 font-medium "
