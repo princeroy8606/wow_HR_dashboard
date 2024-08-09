@@ -12,7 +12,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="hidden w-[15rem] h-full bg-white  flex-col gap-5 items-center p-4 lg:flex">
+    <div className="hidden w-[15rem] h-full bg-blue-100  flex-col gap-5 items-center p-4 lg:flex">
       <div
         className="w-full h-[5rem] flex items-center justify-start"
         onClick={() => navigate("/")}
@@ -24,19 +24,19 @@ const Sidebar = () => {
         />
       </div>
       <div
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/leaders")}
         className={`w-full h-11 cursor-pointer ${
-          pathMatch("/") && "bg-[#2984FF]"
+          pathMatch("/leaders") && "bg-[#2984FF]"
         } p-1 rounded-lg flex  items-center pl-4`}
       >
         <img
           src={
-            pathMatch("/") ? assets.Img.Leader_white : assets.Img.Leader_gray
+            pathMatch("/leaders") ? assets.Img.Leader_white : assets.Img.Leader_gray
           }
           alt="icon"
           className="w-10 h-7 object-contain"
         />
-        <p className={`${pathMatch("/") ? "text-white" : "text-gray-500"}`}>
+        <p className={`${pathMatch("/leaders") ? "text-white" : "text-gray-500"}`}>
           LeaderShip
         </p>
       </div>
