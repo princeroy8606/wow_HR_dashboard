@@ -8,7 +8,7 @@ import Calender_gray from "./calendar-gray.png";
 import Calender_white from "./calendar-white.png";
 import Leader_gray from "./leader-gray.png";
 import Leader_white from "./leader-white.png";
-import Testimonial_gray from "./testimonials-gray.png";
+import Testimonial_gray from "./testimonial-gray.png";
 import Testimonial_white from "./testimonial-white.png";
 import Menu_Icon from "./menu.png";
 import WowHRLogo from "./WowHRLogo.png";

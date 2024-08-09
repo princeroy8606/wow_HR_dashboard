@@ -45,7 +45,7 @@ const MobileSidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/testimonials")
               ? assets.Img.Testimonial_white
               : assets.Img.Testimonial_gray
           }
@@ -68,7 +68,7 @@ const MobileSidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/events")
               ? assets.Img.Calender_white
               : assets.Img.Calender_gray
           }
@@ -91,7 +91,7 @@ const MobileSidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/knowledgeHub")
               ? assets.Img.Knowledge_white
               : assets.Img.Knowledge_gray
           }
