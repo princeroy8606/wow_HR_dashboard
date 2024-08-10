@@ -47,7 +47,7 @@ const NewKnowledge = ({
 
   useEffect(() => {
     if (edit) {
-      console.log(defaultEditData)
+      console.log(defaultEditData);
       setKnowledgeData(defaultEditData);
     }
   }, [edit, defaultEditData]);
@@ -239,8 +239,9 @@ const NewKnowledge = ({
               <iframe
                 src={knowledgeData.mediaUrl}
                 className="absolute top-0 left-0 object-cover w-full h-[10rem] rounded-md z-1"
+                frameBorder="0"
+                allowTransparency="true"
                 allow="encrypted-media"
-                allowFullScreen
               ></iframe>
             )}
             {knowledgeData.mediaFile &&
