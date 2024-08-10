@@ -17,21 +17,21 @@ const MobileSidebar = () => {
         <img src={assets.Img.WowHRLogo} alt="logo" className="w-[70%] h-[40%] object-contain" />
       </div>
       <div
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/leaders")}
         className={`w-full h-9 cursor-pointer ${
-          pathMatch("/") && "bg-[#2984FF]"
+          pathMatch("/leaders") && "bg-[#2984FF]"
         } p-1 rounded-lg flex items-center`}
       >
         <img
           src={
-            pathMatch("/") ? assets.Img.Leader_white : assets.Img.Leader_gray
+            pathMatch("/leaders") ? assets.Img.Leader_white : assets.Img.Leader_gray
           }
           alt="icon"
           className="w-7 h-5 object-contain"
         />
         <p
           className={`${
-            pathMatch("/") ? "text-white" : "text-gray-500"
+            pathMatch("/leaders") ? "text-white" : "text-gray-500"
           } text-[1rem]`}
         >
           LeaderShip
@@ -45,7 +45,7 @@ const MobileSidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/testimonials")
               ? assets.Img.Testimonial_white
               : assets.Img.Testimonial_gray
           }
@@ -68,7 +68,7 @@ const MobileSidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/events")
               ? assets.Img.Calender_white
               : assets.Img.Calender_gray
           }
@@ -91,7 +91,7 @@ const MobileSidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/knowledgeHub")
               ? assets.Img.Knowledge_white
               : assets.Img.Knowledge_gray
           }

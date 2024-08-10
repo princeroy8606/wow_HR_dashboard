@@ -31,12 +31,18 @@ const Sidebar = () => {
       >
         <img
           src={
-            pathMatch("/leaders") ? assets.Img.Leader_white : assets.Img.Leader_gray
+            pathMatch("/leaders")
+              ? assets.Img.Leader_white
+              : assets.Img.Leader_gray
           }
           alt="icon"
           className="w-10 h-7 object-contain"
         />
-        <p className={`${pathMatch("/leaders") ? "text-white" : "text-gray-500"}`}>
+        <p
+          className={`${
+            pathMatch("/leaders") ? "text-white" : "text-gray-500"
+          }`}
+        >
           LeaderShip
         </p>
       </div>
@@ -48,7 +54,7 @@ const Sidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/testimonials")
               ? assets.Img.Testimonial_white
               : assets.Img.Testimonial_gray
           }
@@ -71,7 +77,7 @@ const Sidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/events")
               ? assets.Img.Calender_white
               : assets.Img.Calender_gray
           }
@@ -92,7 +98,7 @@ const Sidebar = () => {
       >
         <img
           src={
-            pathMatch("/")
+            pathMatch("/knowledgeHub")
               ? assets.Img.Knowledge_white
               : assets.Img.Knowledge_gray
           }

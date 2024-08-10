@@ -154,7 +154,7 @@ const NewTestimonial = ({ onCancel, onAddTestimonial, testimonialToEdit }) => {
           <button
             type="button"
             onClick={() => handleUploadTestimonial()}
-            className="w-[9rem] h-full rounded-md bg-blue-500 flex items-center justify-center cursor-pointer shadow-md shadow-blue-100"
+            className="w-fit px-2 h-full rounded-md bg-blue-500 flex items-center justify-center cursor-pointer shadow-md shadow-blue-100"
           >
             <p className="font-medium text-white">Upload Testimonial</p>
           </button>
