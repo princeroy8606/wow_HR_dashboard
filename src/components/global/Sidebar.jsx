@@ -12,7 +12,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="hidden w-[15rem] h-full bg-blue-100  flex-col gap-5 items-center p-4 lg:flex">
+    <div className="hidden w-[15rem] h-full bg-white  flex-col gap-5 items-center p-4 lg:flex">
       <div
         className="w-full h-[5rem] flex items-center justify-start"
         onClick={() => navigate("/")}
@@ -48,7 +48,7 @@ const Sidebar = () => {
       >
         <img
           src={
-            pathMatch("/testimonials")
+            pathMatch("/")
               ? assets.Img.Testimonial_white
               : assets.Img.Testimonial_gray
           }
@@ -71,7 +71,7 @@ const Sidebar = () => {
       >
         <img
           src={
-            pathMatch("/events")
+            pathMatch("/")
               ? assets.Img.Calender_white
               : assets.Img.Calender_gray
           }
@@ -92,7 +92,7 @@ const Sidebar = () => {
       >
         <img
           src={
-            pathMatch("/knowledgeHub")
+            pathMatch("/")
               ? assets.Img.Knowledge_white
               : assets.Img.Knowledge_gray
           }

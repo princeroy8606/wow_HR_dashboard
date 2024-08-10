@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import assets from "../../assets/assets";
+import assets from "../../../../wow_HR_dashboard/src/assets/assets";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
