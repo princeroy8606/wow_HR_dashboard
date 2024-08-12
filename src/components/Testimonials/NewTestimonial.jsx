@@ -44,6 +44,14 @@ const NewTestimonial = ({ onCancel, onAddTestimonial, testimonialToEdit }) => {
   }, [testimonialData.image]);
 
   const handleUploadTestimonial = async () => {
+    if (
+      !testimonialData.description ||
+      testimonialData.name ||
+      testimonialData.designation ||
+      testimonialData.organization
+    ) {
+      return alert("Fill All The Mandatory Details");
+    }
     try {
       let uploadedImageUrl = imageUrl;
 

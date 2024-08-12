@@ -24,6 +24,7 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
     twitter: "",
     instagram: "",
   });
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const resetMentorData = () => {
     setMentorData({
@@ -70,8 +71,7 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
       !mentorData.job ||
       !mentorData.leaderType ||
       !mentorData.location ||
-      !mentorData.description ||
-      !mentorData.profileImg
+      !mentorData.linkedIn
     ) {
       alert("Please fill in all required fields.");
       return;
@@ -133,29 +133,35 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
               value={mentorData.job}
               onChange={(e) => handleInput("job", e.target.value)}
             />
-            {/* <input
-              type="text"
-              className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
-              placeholder="Leader Type *"
-              value={mentorData.leaderType}
-              onChange={(e) => handleInput("leaderType", e.target.value)}
-            /> */}
-
-            <select
-              className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
-              placeholder="Leader Type *"
-              value={mentorData.leaderType}
-              onChange={(e) => handleInput("leaderType", e.target.value)}
-              // onChange={(e) =>
-              //   setEventData({ ...eventData, type: e.target.value })
-              // }
+            <div
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="relative w-full h-10 px-2 font-medium flex items-center cursor-pointer justify-between border-none rounded-md outline-none bg-slate-300 "
             >
-              <option value="" disabled hidden>
-                Select Type
-              </option>
-              <option value="Mentor">Mentor</option>
-              <option value="Core Team">Core Team</option>
-            </select>
+              <p>{mentorData.type ? mentorData.type : "Select Type"}</p>
+              <p>▼</p>
+              {isDropdownOpen && (
+                <div className="absolute w-full h-fit rounded-md bg-blue-300 left-0 top-11 flex flex-col shadow-md">
+                  <div
+                    value="pepTalks"
+                    className="w-full h-10 border-b hover:bg-blue-200 px-4 pt-1 flex items-center"
+                    onClick={() =>
+                      setMentorData({ ...mentorData, leaderType: "Core Team" })
+                    }
+                  >
+                    Core Team
+                  </div>
+                  <div
+                    value="podcast"
+                    className="w-full h-10 border-b  hover:bg-blue-200 px-4 flex items-center"
+                    onClick={() =>
+                      setMentorData({ ...mentorData, leaderType: "Mentor" })
+                    }
+                  >
+                    Mentor
+                  </div>
+                </div>
+              )}
+            </div>
             <input
               type="text"
               className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
@@ -190,7 +196,7 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
         <div className="flex flex-wrap justify-between w-full mt-8">
           <textarea
             className="w-full md:w-[50%] h-[15rem] outline-none border-none rounded-md bg-slate-300 p-3"
-            placeholder="description *"
+            placeholder="description"
             value={mentorData.description}
             onChange={(e) => handleInput("description", e.target.value)}
           />
@@ -198,7 +204,7 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
             <input
               type="text"
               className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-200"
-              placeholder="LinkedIn 🔗"
+              placeholder="LinkedIn 🔗 *"
               value={mentorData.linkedIn}
               onChange={(e) => handleInput("linkedIn", e.target.value)}
             />

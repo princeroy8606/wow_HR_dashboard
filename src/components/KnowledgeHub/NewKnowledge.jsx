@@ -121,36 +121,17 @@ const NewKnowledge = ({
     return match ? match[1] : null;
   };
 
-  console.log(`${knowledgeData.mediaUrl.slice(0,25)}embed/${knowledgeData.mediaUrl.slice(25,)}?utm_source=generator`)
+  console.log(
+    `${knowledgeData.mediaUrl.slice(0, 25)}embed/${knowledgeData.mediaUrl.slice(
+      25
+    )}?utm_source=generator`
+  );
 
   return (
     <div className="absolute w-screen h-screen lg:w-full lg:h-full z-10 top-0 left-0 bg-[#50525580] flex justify-center items-center">
       <div className="w-full lg:w-[90%] h-full md:h-fit bg-white rounded-md p-4 md:p-8">
         <div className="flex flex-wrap justify-between w-full gap-4 mt-8 h-fit">
           <div className="w-full md:w-[50%] h-fit flex flex-col gap-4 ">
-            {/* <input
-              type="text"
-              className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
-              placeholder="Type"
-              value={knowledgeData.type}
-              onChange={(e) =>
-                setKnowledgeData({ ...knowledgeData, type: e.target.value })
-              }
-            /> */}
-
-            {/* <select
-              className="w-full h-10 px-4 font-medium border-none rounded-md outline-none bg-green-300 "
-              // placeholder="Leader Type *"
-              value={knowledgeData.type}
-              onChange={(e) =>
-                setKnowledgeData({ ...knowledgeData, type: e.target.value })
-              }
-            >
-              <option value="" disabled hidden>
-                Select Type
-              </option>
-             
-            </select> */}
             <div
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="relative w-full h-10 px-2 font-medium flex items-center cursor-pointer justify-between border-none rounded-md outline-none bg-slate-300 "
@@ -239,7 +220,12 @@ const NewKnowledge = ({
             {knowledgeData.mediaUrl && knowledgeData.type === "podcast" && (
               <iframe
                 className="absolute top-0 left-0 object-cover w-full h-[10rem] rounded-md z-1"
-                src={`${knowledgeData.mediaUrl.slice(0,25)}embed/${knowledgeData.mediaUrl.slice(25,)}?utm_source=generator`}
+                src={`${knowledgeData.mediaUrl.slice(
+                  0,
+                  25
+                )}embed/${knowledgeData.mediaUrl.slice(
+                  25
+                )}?utm_source=generator`}
                 // src="https://open.spotify.com/embed/episode/0r69jelWmQx5s6rBt44ns7?utm_source=generator"
                 frameBorder="0"
                 allowfullscreen=""
