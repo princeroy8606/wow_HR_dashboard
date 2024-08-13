@@ -19,7 +19,7 @@ const NewTestimonial = ({ onCancel, onAddTestimonial, testimonialToEdit }) => {
     organization: "",
     image: null,
     description: "",
-    rating: null,
+    rating: 0,
   });
 
   const [imageUrl, setImageUrl] = useState("");
