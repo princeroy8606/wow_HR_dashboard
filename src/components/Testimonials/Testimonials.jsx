@@ -207,6 +207,53 @@ const Testimonial = () => {
                   <p className="text-sm text-gray-600">
                     {testimonial.organization}
                   </p>
+                  <div className="w-fit gap-2 flex items-center justify-between mt-4">
+                    <img
+                      src={
+                        testimonial.rating >= 1
+                          ? assets.Img.rated
+                          : assets.Img.unrated
+                      }
+                      alt="icon"
+                      className="w-5 h-5 object-contain cursor-pointer"
+                    />
+                    <img
+                      src={
+                        testimonial.rating >= 2
+                          ? assets.Img.rated
+                          : assets.Img.unrated
+                      }
+                      alt="icon"
+                      className="w-5 h-5 object-contain cursor-pointer"
+                    />
+                    <img
+                      src={
+                        testimonial.rating >= 3
+                          ? assets.Img.rated
+                          : assets.Img.unrated
+                      }
+                      alt="icon"
+                      className="w-5 h-5 object-contain cursor-pointer"
+                    />
+                    <img
+                      src={
+                        testimonial.rating >= 4
+                          ? assets.Img.rated
+                          : assets.Img.unrated
+                      }
+                      alt="icon"
+                      className="w-5 h-5 object-contain cursor-pointer"
+                    />
+                    <img
+                      src={
+                        testimonial.rating == 5
+                          ? assets.Img.rated
+                          : assets.Img.unrated
+                      }
+                      alt="icon"
+                      className="w-5 h-5 object-contain cursor-pointer"
+                    />
+                  </div>
                   <p className="mt-2">{testimonial.description}</p>
                   <div className="flex gap-2 mt-4">
                     <button

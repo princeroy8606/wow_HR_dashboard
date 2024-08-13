@@ -12,6 +12,8 @@ import Testimonial_gray from "./testimonial-gray.png";
 import Testimonial_white from "./testimonial-white.png";
 import Menu_Icon from "./menu.png";
 import WowHRLogo from "./WowHRLogo.png";
+import unrated from "./unrated.png";
+import rated from "./rated.png";
 
 const Img = {
   Search,
@@ -27,7 +29,9 @@ const Img = {
   Testimonial_gray,
   Testimonial_white,
   Menu_Icon,
-  WowHRLogo
+  WowHRLogo,
+  unrated,
+  rated,
 };
 
 export default { Img };

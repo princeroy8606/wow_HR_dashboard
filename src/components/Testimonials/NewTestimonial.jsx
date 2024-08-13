@@ -10,6 +10,7 @@ import {
   doc,
   updateDoc,
 } from "../../firebase";
+import assets from "../../assets/assets";
 
 const NewTestimonial = ({ onCancel, onAddTestimonial, testimonialToEdit }) => {
   const [testimonialData, setTestimonialData] = useState({
@@ -18,6 +19,7 @@ const NewTestimonial = ({ onCancel, onAddTestimonial, testimonialToEdit }) => {
     organization: "",
     image: null,
     description: "",
+    rating: null,
   });
 
   const [imageUrl, setImageUrl] = useState("");
@@ -143,13 +145,78 @@ const NewTestimonial = ({ onCancel, onAddTestimonial, testimonialToEdit }) => {
             )}
           </div>
         </div>
-        <div className="flex justify-between w-full mt-8">
+        <div className="flex justify-between items-center w-full mt-8">
           <textarea
-            className="w-full h-[12rem] outline-none border-none rounded-md bg-slate-300 p-3"
+            className="w-[50%] h-[12rem] outline-none border-none rounded-md bg-slate-300 p-3"
             placeholder="Description *"
             value={testimonialData.description}
             onChange={(e) => handleInput("description", e.target.value)}
           />
+          <div className="w-[40%] h-fit flex items-center justify-center flex-col  ">
+            <p>Add Your Rating </p>
+            <div className="w-[80%] flex items-center justify-between mt-4">
+              <img
+                src={
+                  testimonialData.rating >= 1
+                    ? assets.Img.rated
+                    : assets.Img.unrated
+                }
+                onClick={() =>
+                  setTestimonialData({ ...testimonialData, rating: 1 })
+                }
+                alt="icon"
+                className="w-10 h-10 object-contain cursor-pointer"
+              />
+              <img
+                src={
+                  testimonialData.rating >= 2
+                    ? assets.Img.rated
+                    : assets.Img.unrated
+                }
+                onClick={() =>
+                  setTestimonialData({ ...testimonialData, rating: 2 })
+                }
+                alt="icon"
+                className="w-10 h-10 object-contain cursor-pointer"
+              />
+              <img
+                src={
+                  testimonialData.rating >= 3
+                    ? assets.Img.rated
+                    : assets.Img.unrated
+                }
+                onClick={() =>
+                  setTestimonialData({ ...testimonialData, rating: 3 })
+                }
+                alt="icon"
+                className="w-10 h-10 object-contain cursor-pointer"
+              />
+              <img
+                src={
+                  testimonialData.rating >= 4
+                    ? assets.Img.rated
+                    : assets.Img.unrated
+                }
+                onClick={() =>
+                  setTestimonialData({ ...testimonialData, rating: 4 })
+                }
+                alt="icon"
+                className="w-10 h-10 object-contain cursor-pointer"
+              />
+              <img
+                src={
+                  testimonialData.rating == 5
+                    ? assets.Img.rated
+                    : assets.Img.unrated
+                }
+                onClick={() =>
+                  setTestimonialData({ ...testimonialData, rating: 5 })
+                }
+                alt="icon"
+                className="w-10 h-10 object-contain cursor-pointer"
+              />
+            </div>
+          </div>
         </div>
         <div className="w-full h-[2.5rem] flex justify-between items-center mt-8">
           <button
