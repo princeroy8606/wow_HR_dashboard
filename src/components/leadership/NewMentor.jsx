@@ -25,6 +25,7 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
     instagram: "",
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
 
   const resetMentorData = () => {
     setMentorData({
@@ -140,7 +141,7 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
               <p>{mentorData.type ? mentorData.type : "Select Type"}</p>
               <p>▼</p>
               {isDropdownOpen && (
-                <div className="absolute w-full h-fit rounded-md bg-blue-300 left-0 top-11 flex flex-col shadow-md">
+                <div className="absolute w-full h-fit rounded-md bg-blue-300 left-0 top-11 flex flex-col shadow-md z-10">
                   <div
                     value="pepTalks"
                     className="w-full h-10 border-b hover:bg-blue-200 px-4 pt-1 flex items-center"
@@ -162,13 +163,50 @@ const NewMentor = ({ onCancel, onAddMentor, mentorToEdit }) => {
                 </div>
               )}
             </div>
-            <input
+            <div
+              onClick={() => setIsLocationDropdownOpen(!isLocationDropdownOpen)}
+              className="relative w-full h-10 px-2 font-medium flex items-center cursor-pointer justify-between border-none rounded-md outline-none bg-slate-300 "
+            >
+              <p>
+                {mentorData.location ? mentorData.location : "Choose Location"}
+              </p>
+              <p>▼</p>
+              {isLocationDropdownOpen && (
+                <div className="absolute w-full h-fit rounded-md bg-blue-300 left-0 top-11 flex flex-col shadow-md">
+                  <div
+                    className="w-full h-10 border-b hover:bg-blue-200 px-4 pt-1 flex items-center"
+                    onClick={() =>
+                      setMentorData({ ...mentorData, location: "Hyderabad" })
+                    }
+                  >
+                    Hyderabad
+                  </div>
+                  <div
+                    className="w-full h-10 border-b  hover:bg-blue-200 px-4 flex items-center"
+                    onClick={() =>
+                      setMentorData({ ...mentorData, location: "Bangalore" })
+                    }
+                  >
+                    Bangalore
+                  </div>
+                  <div
+                    className="w-full h-10 border-b  hover:bg-blue-200 px-4 flex items-center"
+                    onClick={() =>
+                      setMentorData({ ...mentorData, location: "Chennai" })
+                    }
+                  >
+                    Chennai
+                  </div>
+                </div>
+              )}
+            </div>
+            {/* <input
               type="text"
               className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
               placeholder="Location *"
               value={mentorData.location}
               onChange={(e) => handleInput("location", e.target.value)}
-            />
+            /> */}
           </div>
           <div className="w-full md:w-[40%] h-[10rem] rounded-md bg-slate-300 relative flex justify-center items-center">
             <input
