@@ -152,7 +152,7 @@ const NewEvents = ({
             <input
               type="text"
               className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
-              placeholder="Event Type"
+              placeholder="Event Type *"
               value={eventData.type}
               onChange={(e) =>
                 setEventData({ ...eventData, type: e.target.value })

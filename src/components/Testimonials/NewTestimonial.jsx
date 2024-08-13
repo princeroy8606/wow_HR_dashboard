@@ -46,9 +46,9 @@ const NewTestimonial = ({ onCancel, onAddTestimonial, testimonialToEdit }) => {
   const handleUploadTestimonial = async () => {
     if (
       !testimonialData.description ||
-      testimonialData.name ||
-      testimonialData.designation ||
-      testimonialData.organization
+      !testimonialData.name ||
+      !testimonialData.designation ||
+      !testimonialData.organization
     ) {
       return alert("Fill All The Mandatory Details");
     }

@@ -54,6 +54,14 @@ const NewKnowledge = ({
 
   const upload = async () => {
     let url = null;
+    if (
+      !knowledgeData.authorName ||
+      !knowledgeData.title ||
+      !knowledgeData.mediaUrl ||
+      !knowledgeData.description
+    ) {
+      return alert("Fill All Details");
+    }
 
     if (knowledgeData.mediaFile && !edit) {
       try {
@@ -136,7 +144,7 @@ const NewKnowledge = ({
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="relative w-full h-10 px-2 font-medium flex items-center cursor-pointer justify-between border-none rounded-md outline-none bg-slate-300 "
             >
-              <p>{knowledgeData.type ? knowledgeData.type : "Select Type"}</p>
+              <p>{knowledgeData.type ? knowledgeData.type : "Select Type *"}</p>
               <p>▼</p>
               {isDropdownOpen && (
                 <div className="absolute w-full h-fit rounded-md bg-blue-300 left-0 top-11 flex flex-col shadow-md">
@@ -176,7 +184,7 @@ const NewKnowledge = ({
             <input
               type="text"
               className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
-              placeholder="Title"
+              placeholder="Title *"
               value={knowledgeData.title}
               onChange={(e) =>
                 setKnowledgeData({
@@ -188,7 +196,7 @@ const NewKnowledge = ({
             <input
               type="text"
               className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-300"
-              placeholder="Author Name"
+              placeholder="Author Name *"
               value={knowledgeData.authorName}
               onChange={(e) =>
                 setKnowledgeData({
@@ -232,13 +240,6 @@ const NewKnowledge = ({
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
               ></iframe>
-              // <iframe
-              // src={knowledgeData.mediaUrl}
-              //   className="absolute top-0 left-0 object-cover w-full h-[10rem] rounded-md z-1"
-              //   frameBorder="0"
-              //   allowTransparency="true"
-              //   allow="encrypted-media"
-              // ></iframe>
             )}
             {knowledgeData.mediaFile &&
               knowledgeData.sourceType === "video" && (
@@ -254,7 +255,7 @@ const NewKnowledge = ({
         <div className="flex flex-wrap justify-between w-full h-fit mt-9 md:mt-0">
           <textarea
             className="w-full md:w-[50%] h-[15rem] outline-none border-none rounded-md bg-slate-300 p-3"
-            placeholder="Description"
+            placeholder="Description *"
             value={knowledgeData.description}
             onChange={(e) =>
               setKnowledgeData({
@@ -267,7 +268,7 @@ const NewKnowledge = ({
             <input
               type="text"
               className="w-full h-10 pl-2 font-medium border-none rounded-md outline-none bg-slate-200"
-              placeholder="Link 🔗"
+              placeholder="Link 🔗 *"
               value={knowledgeData.mediaUrl}
               onChange={(e) =>
                 setKnowledgeData({ ...knowledgeData, mediaUrl: e.target.value })
